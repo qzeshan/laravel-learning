@@ -16,19 +16,14 @@
             </div>
             <div id="sidebar">
                 <ul class="style1">
+                    @foreach ($articles as $article)
                     <li class="first">
-                        <h3>Amet sed volutpat mauris</h3>
-                        <p><a href="#">In posuere eleifend odio. Quisque semper augue mattis wisi. Pellentesque viverra vulputate enim. Aliquam erat volutpat.</a></p>
+                    <h3><a href="/articles/{{$article->id}}"> {{$article->title}}</h3>
+                    <p>{{$article->excerpt}}</p>
                     </li>
-                    <li>
-                        <h3>Sagittis diam dolor sit amet</h3>
-                        <p><a href="#">In posuere eleifend odio. Quisque semper augue mattis wisi. Pellentesque viverra vulputate enim. Aliquam erat volutpat.</a></p>
-                    </li>
-                    <li>
-                        <h3>Maecenas ac quam risus</h3>
-                        <p><a href="#">In posuere eleifend odio. Quisque semper augue mattis wisi. Pellentesque viverra vulputate enim. Aliquam erat volutpat.</a></p>
-                    </li>
+                    @endforeach
                 </ul>
+
                 <div id="stwo-col">
                     <div class="sbox1">
                         <h2>Etiam rhoncus</h2>
